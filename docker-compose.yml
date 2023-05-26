@@ -1,0 +1,35 @@
+version: "3.9"
+name: project_one
+
+services:
+  database:
+    container_name: mysql_database
+    image: mysql:8.0.31
+    restart: always
+    environment:
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: access_control
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_vol:/var/lib/mysql
+      - ./backend/sql:/docker-entrypoint-initdb.d
+  
+  #backend:
+    #build: ./backend
+    #networks:
+    #  - server-side
+    #network_mode: "host" 
+    #depends_on:
+    ##  - database
+    #links:
+    #  - database:db
+
+volumes: 
+  mysql_vol:
+    name: mysql_volume
+
+
+
