@@ -54,6 +54,7 @@ update offer set userId = 01 where id = 01;
 update offer set userId = 02 where id = 02;
 alter table offer drop foreign key offer_to_category, drop column categoryId;
 alter table food drop foreign key food_to_user, drop column userId;
+alter table request drop foreign key request_to_food, drop column foodId;
 
 select name, email, description, amount, unit from user inner join offer on offer.userId = user.id;
 select a.name AS userName, a.email, b.id AS offerId, c.description, c.amount, c.unit FROM user a inner join offer b on (a.id = b.userId) inner join food c on (c.offerId = b.id);
