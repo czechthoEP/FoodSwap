@@ -47,3 +47,20 @@ alter table request add column userId int;
 alter table request add constraint request_to_user foreign key (userId) references user(id);
 insert into request (id, foodId,amount,unit,userId) values (01,01,3,'pcs',03);
 insert into request (id, foodId,amount,unit,userId) values (02,02,250,'ml',04);
+
+alter table offer add column userId int;
+alter table offer add constraint offer_to_user foreign key (userId) references user(id);
+update offer set userId = 01 where id = 01;
+update offer set userId = 02 where id = 02;
+alter table offer drop foreign key offer_to_category, drop column categoryId;
+alter table food drop foreign key food_to_user, drop column userId;
+
+select name, email, description, amount, unit from user inner join offer on offer.userId = user.id;
+select a.name AS userName, a.email, b.id AS offerId, c.description, c.amount, c.unit FROM user a inner join offer b on (a.id = b.userId) inner join food c on (c.offerId = b.id);
+select a.name AS userName, a.email, b.id as requestId, b.amount, b.unit from user a inner join request b on (a.id = b.userId);
+select a.name AS category, b.description, b.amount, b.unit from category a inner join food b on (a.id = b.categoryId);
+
+insert into user (id, name, password, email) values (01,'Simon','1234','simon@gmail.com');
+select * from user where id = 01;
+update user set email = 'max@t-online.de' where id = 02;
+delete from user where id = 01;
