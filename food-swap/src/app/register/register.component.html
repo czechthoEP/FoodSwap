@@ -1,1 +1,31 @@
-<p>register works!</p>
+<!--p>register works!</p-->
+
+<div class="container custom-container">
+    <div class="col-md-12">
+      <h3 class="mb-3 text-center">Register User</h3>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="userDetails.firstName" class="form-control" placeholder="firstName">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="userDetails.lastName" class="form-control" placeholder="lastName">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="userDetails.email" class="form-control" placeholder="email">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="userDetails.street" class="form-control" placeholder="street">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="userDetails.streetNr" class="form-control" placeholder="streetNr">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="userDetails.city" class="form-control" placeholder="city">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="userDetails.password" class="form-control" placeholder="city">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" (click)="addEmployee(userDetails)">Create User</button>
+      </div>
+    </div>
+  </div>
