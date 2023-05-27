@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+ background-color: black;
+ background-size: 100% 177.78%;
+ background-repeat: no-repeat;
+ color: white;
+ }
+ .H1{
+  color: black;
+  text-align: center;
+ }
+ .h2{
+  font: "Calibri";
+   color: white;
+  align-items: left;
+  font-size: 10;
+  padding-top: 3px;
+ }
+ .container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
+  display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.button_menu{
+    background-color: #8ac5dd;
+    border-radius: 8px;
+    display: grid;
+      grid-template-columns: auto auto auto auto;
+      padding:4px;
+}
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8ac5dd;
+    color: #ffffff;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .button_select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #70b1d9;
+    color: #ffffff;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .button_cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #70b1d9;
+    color: #ffffff;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button img {
+    margin-bottom: 5px;
+  }
+  .label {
+    font-size: 10px;
+    padding-bottom: 3px;
+    text-align: center;
+  }
+  .transparent-button {
+  background-color: transparent;
+  padding-left: 3px;
+  border: none;
+}
+.input[type=text] {
+  border-radius: 19px;
+  height:36px;
+  width: 371px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.scrollable {
+  height: 270px; /* sets the height of the scrollable area */
+  overflow-y: scroll; /* enables vertical scrolling */
+}
+.list_cards{
+  height:130px;
+  width : 150px;
+  border: 3px solid #70b1d9;
+  border-radius: 5px;
+.green_button{
+  background-color: #82BD53; /* Green */
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+ }
+
+
+</style>
+</head>
+<body>
+
+
+<div class="grid-container">
+    <img class="logo" src="assets/icons/icon.png"  width="80" height="40" alt="Logo">
+    <h1>Swap Something?</h1>
+    <img src="assets/images/upload (2).png"  width="160" height="160" alt="Logo">
+
+ <label for="login-id" style="padding-top: 7px;padding-bottom: 3px;">Login ID:</label>
+ <input type="text" id="login-id">
+
+ <label for="password" style=" padding-top: 7px;padding-bottom: 3px;">Passwort:</label>
+ <input type="password" id="password">
+
+ <label for="login-id" style="padding-top: 7px;padding-bottom: 3px;">Login ID:</label>
+ <input type="text" id="login-id">
+
+ <label for="password" style=" padding-top: 7px;padding-bottom: 3px;">Passwort:</label>
+ <input type="password" id="password">
+
+
+ <div class="vertical-center">
+ <button class="green_button" routerLink="/page2" type="submit">Let's Swap!</button></div>
+
+</div>
+<div class="button_menu">
+    <button routerLink="/page2" class="button">
+        <div class="icon">
+            <img src="assets/icons/home.svg" alt="Icon" width="20" height="20">
+          </div>
+          <div class="label">
+            home
+          </div>
+      </button>
+    <button routerLink="/page3" class="button_select">
+        <div class="icon">
+            <img src="assets/icons/add.svg" alt="Icon" width="20" height="20">
+          </div>
+          <div class="label">
+            add
+          </div>
+      </button>
+      <button routerLink="/page4" class="button">
+        <div class="icon">
+            <img src="assets/icons/cart.svg" alt="Icon" width="20" height="20">
+          </div>
+          <div class="label">
+            shop
+          </div>
+      </button>
+      <button routerLink="/page5" class="button">
+        <div class="icon">
+            <img src="assets/icons/user.svg" alt="Icon" width="20" height="20">
+          </div>
+          <div class="label">
+            user
+          </div>
+      </button>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+ body {
+ background-color: black;
+ background-size: 100% 177.78%;
+ background-repeat: no-repeat;
+ color: white;
+ }
+ .H1{
+  color: black;
+  text-align: center;
+ }
+ .container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ }
+ .login_container{
+  background: #4A94D3;
+  border-radius: 15px;
+  padding: 2px 25px 25px 25px;
+ }
+ .logo {
+  padding-top: 25px;
+  padding-bottom: 65px;
+ width: 200px;
+ }
+ .green_button{
+  background-color: #82BD53; /* Green */
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+ }
+ .vertical-center {
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;
+  padding-bottom: 145px;
+  align-items: center;
+}
+ .form-group {
+ display: flex;
+ flex-direction: column;
+ margin-bottom: 10px;
+ }
+ label {
+ margin-bottom: 5px;
+ }
+ input[type="text"], input[type="password"] {
+ padding: 5px;
+ }
+ </style>
+</head>
+<body>
+ <div class="container">
+ <img class="logo" src="assets/images/logo.png" alt="Logo">
+ <form>
+  <div class="login_container">
+  <h1 class="H1">LOGIN</h1>
+ <div class="form-group">
+ <label for="login-id">Login ID:</label>
+ <input type="text" id="login-id">
+ </div>
+ <div class="form-group">
+ <label for="password">Passwort:</label>
+ <input type="password" id="password">
+</div>
+ </div>
+ <div class="vertical-center">
+ <button class="green_button" routerLink="/page2" type="submit">Let's Swap!</button></div>
+ </form>
+ </div>
+</body>
+</html>

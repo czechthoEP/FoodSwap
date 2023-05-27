@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+ background-color: black;
+ background-size: 100% 177.78%;
+ background-repeat: no-repeat;
+ color: white;
+ }
+ .H1{
+  color: black;
+  text-align: center;
+ }
+ .container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
+  display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.button_menu{
+    background-color: #8ac5dd;
+    border-radius: 8px;
+    display: grid;
+      grid-template-columns: auto auto auto auto;
+      padding: 4px;
+}
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8ac5dd;
+    color: #ffffff;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .button_select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #70b1d9;
+    color: #ffffff;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .active{
+    background-color: #000000;
+  }
+  
+  .button img {
+    margin-bottom: 5px;
+  }
+  .label {
+    font-size: 10px;
+    padding-bottom: 3px;
+    text-align: center;
+  }
+
+</style>
+</head>
+<body>
+
+
+<div class="grid-container">
+    <img class="logo" src="assets/icons/icon.png"  width="80" height="40" alt="Logo">  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div> 
+</div>
+<div class="button_menu">
+    <button routerLink="/page2" class="button">
+        <div class="icon">
+            <img src="assets/icons/home.svg" alt="Icon" width="20" height="20">
+          </div>
+          <div class="label">
+            home
+          </div>
+      </button>
+    <button routerLink="/page3" class="button">
+        <div class="icon">
+            <img src="assets/icons/add.svg" alt="Icon" width="20" height="20">
+          </div>
+          <div class="label">
+            add
+          </div>
+      </button>
+      <button routerLink="/page4" class="button">
+        <div class="icon">
+            <img src="assets/icons/cart.svg" alt="Icon" width="20" height="20">
+          </div>
+          <div class="label">
+            shop
+          </div>
+      </button>
+      <button routerLink="/page5" class="button_select">
+        <div class="icon">
+            <img src="assets/icons/user.svg" alt="Icon" width="20" height="20">
+          </div>
+          <div class="label">
+            user
+          </div>
+      </button>
+</div>
+</body>
+</html>
